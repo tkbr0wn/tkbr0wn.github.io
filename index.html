@@ -130,7 +130,7 @@
             })
             .attr("viewBox", "0 -5 10 10")
             .attr("refX", 10)
-            .attr("refY", 0)
+s            .attr("refY", 0)
             .attr("markerWidth", 10)
             .attr("markerHeight", 10)
             .attr("orient", "auto")
@@ -151,7 +151,7 @@
             .style("stroke-width", function (d) {
                 return 1;
             });
-
+i
     //  ===================================================
     //  ===============  NODES SETUP     ==================
     //  ===================================================
@@ -196,7 +196,7 @@
     var text = svg.append("g").selectAll("text")
             .data(force.nodes())
             .enter().append("text")
-            .attr("visibility", "hidden")
+            .attr("visibility", "visible")
             .text(function (d) {
                 return d.name.substring(0, default_max_texts_length)
             });
