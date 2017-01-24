@@ -52,13 +52,13 @@
     var default_link_strength = 0.7;
 
     // Should I comment this?
-    var default_circle_radius = 10;
+    var default_circle_radius = 15;
 
     // you can set it to true, but this will not help to understanf what's going on
-    var show_texts_near_circles = true;
+    var show_texts_near_circles = false;
     var default_max_texts_length = 100;
 
-    var charge_multiplier = 400;
+    var charge_multiplier = 200;
 
     var dvgraph = objcdv.parse_dependencies_graph(dependencies);
     var d3graph = dvgraph.d3jsGraph();
@@ -130,7 +130,7 @@
             })
             .attr("viewBox", "0 -5 10 10")
             .attr("refX", 10)
-s            .attr("refY", 0)
+            .attr("refY", 0)
             .attr("markerWidth", 10)
             .attr("markerHeight", 10)
             .attr("orient", "auto")
@@ -151,7 +151,7 @@ s            .attr("refY", 0)
             .style("stroke-width", function (d) {
                 return 1;
             });
-i
+
     //  ===================================================
     //  ===============  NODES SETUP     ==================
     //  ===================================================
@@ -196,7 +196,7 @@ i
     var text = svg.append("g").selectAll("text")
             .data(force.nodes())
             .enter().append("text")
-            .attr("visibility", "visible")
+            .attr("visibility", "hidden")
             .text(function (d) {
                 return d.name.substring(0, default_max_texts_length)
             });
