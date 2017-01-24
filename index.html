@@ -52,13 +52,13 @@
     var default_link_strength = 0.7;
 
     // Should I comment this?
-    var default_circle_radius = 15;
+    var default_circle_radius = 10;
 
     // you can set it to true, but this will not help to understanf what's going on
-    var show_texts_near_circles = false;
+    var show_texts_near_circles = true;
     var default_max_texts_length = 100;
 
-    var charge_multiplier = 200;
+    var charge_multiplier = 400;
 
     var dvgraph = objcdv.parse_dependencies_graph(dependencies);
     var d3graph = dvgraph.d3jsGraph();
